@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+    SORT OUT SECURITY ISSUES-  CHANGE ACCESS ORIGIN * TO THE ONES I NEED, AND ALTER THE SUPPORT CORS ETC
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://revolutioninteractivevideo.com; media-src *">
+
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+       <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://revolutioninteractivevideo.com/wp-content/uploads/panos/augmentedrealityheritage/www/ cdvfile://localhost/persistent/ data: gap: https://ssl.gstatic.com; style-src 'self'; media-src *">
+
+       
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Visitar</title>
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+        <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/searchtours.js"></script>
+        <script type="text/javascript" src="js/downloader.js"></script>
+         <script type="text/javascript" src="js/database.js"></script>
+        <script type="text/javascript" src="js/eventlisten.js"></script>
+    </head>
+    <body>
+       
+            
+               
+           
+            
+         <div data-role="page" id="pageone" data-theme="b">
+              
+  <div data-role="header">
+       <h1>VisitAR</h1>
+    <div data-role="navbar" data-position="fixed">
+    <ul>
+      <li><a href="#pageone" data-icon="home">Home</a></li>
+      <li><a href="#pageoneinfo"   data-icon="info">Information</a></li>
+      <li><a href="#searchpage" data-icon="search">Search</a></li>
+    </ul>
+  </div>
+  </div>
+
+  <div data-role="main" class="ui-content">
+     
+      <div class="picandtext">
+    <img id="mainpicy" src="img/Vtitle.png"/>
+    <h3 class="headline"  >A better view of the world</h3>
+    <p class="headline" >Welcome to VisitAR.<br>This page shows your downloaded tours for viewing offline. Head to the Search page to search all available tours.<br></p>
+      </div>  
+      
+     <ul data-role="listview" id="downloadlist2" data-filter="true" data-input="#myFilt" placeholder="You currently have no downloaded tours">
+        
+    </ul> 
+  </div>
+  
+</div> 
+
+               
+    
+
+<div data-role="page"  id="pageoneinfo" data-theme="b">
+    <div data-role="header">
+        <h1>FAQ</h1>
+        <div data-role="navbar" data-position="fixed">
+            <ul>
+                <li><a href="#pageone" data-icon="home">Home</a></li>
+                <li><a href="#pageoneinfo"   data-icon="info">Information</a></li>
+                <li><a href="#searchpage" data-icon="search">Search</a></li>
+            </ul>
+        </div> 
+    </div>
+    
+    <div data-role="collapsible-set" class="whitespacenorm">
+        <div data-role="collapsible">
+            <h2 class="explan">What is Visitar?</h2>
+               Visitar uses augmented reality (AR) and virtual reality (VR) to enhance your view of the world. At a Visitar-enhanced venue, your phone acts as a virtual tour guide, adding a layer of information and highlighting points of interest.
+        </div>
+        
+        <div data-role="collapsible">
+            <h2 class="explan">How does it work?</h2>
+                With AR, hold your phone in front of you and turn around on the spot. The view matches reality and you can tap on objects for information, pictures, video and audio.<br>With VR, use a virtual reality headset to see the tour in 3D. These are usually designed for children - ask the venue if they sell Google Cardboard.
+        </div>
+        
+        <div data-role="collapsible">
+            <h2 class="explan">Where do I start?</h2>
+                Head to the Search page to find the correct tour. Tap on it and then tap Download. When it has finished downloading, head back to the Home page, where you will find the tour ready to use.
+        </div>
+        
+        <div data-role="collapsible">
+            <h2 class="explan">I'm at the venue. What now?</h2>
+                On the Visitar Home page, tap on the tour. Then follow the on-screen instructions; these will usually say to line up the view on your phone with reality and tap the dialogue box to start. The view will now move as you turn your phone and you can tap on objects for more information.<br>There will be several spots around the venue where you can stand - tap on doorways or arrows to move to another area.
+        </div>
+        
+        <div data-role="collapsible">
+            <h2 class="explan">The tour lost alignment</h2>
+                Some phones are more accurate than others at recording movement. If your phone loses alignment, tap the realign button and follow the instructions.
+        </div>
+        
+		        <div data-role="collapsible">
+            <h2 class="explan">Contact Support</h2>
+               <a href="mailto:contact@revolutioninteractivevideo.com?subject=VisitAR tour enquiry" rel="external">Email us here</a> and we'll do our best to help.  
+        </div>
+        
+        <div data-role="collapsible">
+            <h2 class="explan">Can Visitar do me a tour?</h2>
+                <a href="mailto:contact@revolutioninteractivevideo.com?subject=VisitAR tour enquiry" rel="external">Tap here to drop us an email</a> and we'll be in contact!
+        </div>
+        
+       
+        
+        
+
+    </div>
+</div>
+    
+    
+    
+    
+    
+<div data-role="page" id="searchpage" data-theme="b">
+
+ <div data-role="header">
+         <h1>Search</h1>
+             <div data-role="navbar" data-position="fixed">
+                  <ul>
+                        <li><a href="#pageone" data-icon="home">Home</a></li>
+                        <li><a href="#pageoneinfo" data-icon="info">Information</a></li>
+                        <li><a href="#searchpage" data-icon="search">Search</a></li>
+                 </ul>
+             </div>
+    </div>
+
+    
+    
+        <p class="headline" >This list shows all available AR and VR tours. Download them to view offline</p>
+        <form class="ui-filterable">
+                <input id="myFilter" placeholder="Search by property name or county" data-type="search">
+        </form>
+
+        <ul data-role="listview"  id="listsearch" data-filter="true" data-input="#myFilter">
+           
+        </ul>
+    
+
+        
+    
+
+    
+</div>
+    
+
+        
+           
+    </body>
+</html>
