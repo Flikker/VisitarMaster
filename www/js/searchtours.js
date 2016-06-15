@@ -10,7 +10,7 @@ $(document).on('pagebeforeshow', '#searchpage', function(){
         timeout: 20000,
         success: function(data, status){
             $.each(data, function(i,item){
-                var place = '<li> <a href="tourdetails.html?id=' +item.id+  '" ><img src="' +item.picture+ '">' +item.name+ '<br>' +item.address+ '</a></li>';
+                var place = '<li> <a href="www/tourdetails.html?id=' +item.id+  '" ><img src="' +item.picture+ '">' +item.name+ '<br>' +item.address+ '</a></li>';
                 
                 output.append(place);
             });
